@@ -26,9 +26,15 @@ public class Prodotto {
         this.price = price;
     }
 
-    float calculateIva() {
-        price = (price * iva) / 100 + price;
-        return price;
+    String calculateIva() {
+        float priceWiva = (price * iva) / 100 + price;
+        String priceFormat = String.format("%.2f", priceWiva);
+        return priceFormat;
+    }
+
+    float calculateIvaNotFormatted() {
+        float priceWiva = (price * iva) / 100 + price;
+        return priceWiva;
     }
 
     void extendName() {
