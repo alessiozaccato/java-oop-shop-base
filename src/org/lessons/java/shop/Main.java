@@ -8,7 +8,10 @@ public class Main {
 
         prodotto.calculateIva();
 
-        System.out.println(prodotto.code);
+        System.out.println(prodotto.getCode());
+
+        //let's create new instance with overloaded constructor
+        Prodotto prodottoOverload = new Prodotto("tablet", 50.6f);
 
         //how to format the output as i would to be with %
         System.out.printf("il prezzo comprensivo di iva è: %.2f %n" , prodotto.calculateIvaNotFormatted());
